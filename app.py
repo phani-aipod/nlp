@@ -131,4 +131,5 @@ def get_bot_response():
     userText = request.args.get('msg')
     return get_response(userText)
 if __name__ == "__main__":
-    app.run()
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=8080)
