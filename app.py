@@ -117,7 +117,7 @@ from transformers import DistilBertTokenizer, DistilBertModel
 tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-uncased')
 
 #load the saved model
-model = torch.load('model/trained_model.pth',torch.device(device))
+model = torch.load('trained_model.pth',torch.device(device))
 
 from flask import Flask, render_template, request
 
